@@ -130,7 +130,7 @@ bool dfs(int r, int c, const vector<vector<int>>& maze, vector<vector<bool>>& vi
         return false;
     }
     // if visited
-    if (/* visited[r][c] == true*/) {
+    if (visited[r][c]) {
         return false;
     }
     //marks cell as now visited
