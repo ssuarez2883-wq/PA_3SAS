@@ -118,24 +118,30 @@ void printPath(pair<int,int> exitcell,
 // Add arguments, return type, and logic
 // ----------------------------------------------------------
 bool dfs(int r, int c, const vector<vector<int>>& maze, vector<vector<bool>>& visited, vector<vector<int>>& parent_r, vector<vector<int>>& parent_c, int exit_r, int exit_c) {
-    if (/*out of bounds*/) {
+    int N = maze.size();
+    int M = maze[0].size();
+
+    // if out of bounds
+    if (r<0 || r>= N || c<0 || c>= M) {
         return false;
     }
-    if (/*maze[r][c] is 1*/) {
+    // if wall
+    if (maze[r][c] == 1) {
         return false;
     }
+    // if visited
     if (/* visited[r][c] == true*/) {
         return false;
     }
     //marks cell as now visited
     visited[r][c] = true;
 
-    //exit
+    // if exit
     if (r == exit_r && c == exit_c) {
         return true;
     }
 
-    for (int i =0; i < 4; i++) {
+    for (int i = 0; i < 4; i++) {
         int nr = r + dr[i];
         int nc = c + dc[i];
 
