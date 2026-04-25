@@ -38,18 +38,18 @@ and review, I decided on false; however, i probably am gonna need to come back t
 
 ---
 
-## Entry 3 - [Date]
+## Entry 3 - [4/24/26]
 **Issue encountered:**  
-...
+Needed way to actually explore other cells
 
 **Error messages or symptoms:**  
-...
+Issue of potential misidentification of certain cells
 
 **Attempts made:**  
-...
+I used the dr and dc arrays to compute neighboring cell positions/coordinates 
 
 **Final resolution:**  
-...
+I added a loop to examine four possible moving directions.
 
 **Notes:**  
 ...
