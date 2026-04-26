@@ -147,7 +147,9 @@ bool dfs(int r, int c, const vector<vector<int>>& maze, vector<vector<bool>>& vi
 
         if (nr >= 0 && nr < N && nc >= 0 && nc < M) {
             if (maze[nr][nc] == 0 && !visited[nr][nc]) {
-                // recursive method...
+                if (dfs(nr, nc, maze, visited, parent_r, parent_c, exit_r, exit_c)) {
+                    return true;
+                }
             }
         }
 

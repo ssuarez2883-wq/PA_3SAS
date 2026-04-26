@@ -56,18 +56,18 @@ I added a loop to examine four possible moving directions.
 
 ---
 
-## Entry 4 - [Date]
+## Entry 4 - [4/26/26]
 **Issue encountered:**  
-...
+Needed to actually start the exploring part of the maze
 
 **Error messages or symptoms:**  
-...
+Function would never loop and just stop after checking one cell
 
 **Attempts made:**  
-...
+Reviewed what arguments should be passed and how the return values should affect the recursive call
 
 **Final resolution:**  
-...
+Added the recursive DFS call for valid neighbroing cells and ensured the function immediately returns true
 
 **Notes:**  
 ...
