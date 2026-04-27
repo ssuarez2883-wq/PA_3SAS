@@ -74,21 +74,21 @@ Added the recursive DFS call for valid neighbroing cells and ensured the functio
 
 ---
 
-## Entry 5 - [Date]
+## Entry 5 - [4/27/26]
 **Issue encountered:**  
-...
+Needed to actually form the path from entrance to exit
 
 **Error messages or symptoms:**  
-...
+the printPath function didn't give the right path
 
 **Attempts made:**  
-...
+reviewed parent tracking!!
 
 **Final resolution:**  
-...
+i added parent reassignment before the recursive call so the previous cell is recorded.
 
 **Notes:**  
-...
+parent tracking is ESSENTIAL for reconstructing a path within DFS
 
 ---
 
