@@ -92,18 +92,18 @@ parent tracking is ESSENTIAL for reconstructing a path within DFS
 
 ---
 
-## Entry 6 - [Date]
+## Entry 6 - [5/6/26]
 **Issue encountered:**  
-...
+needed to connect the last parts of program
 
 **Error messages or symptoms:**  
-...
+program didnt try to actually find path
 
 **Attempts made:**  
-...
+needed to find where program was actually implemented (main)
 
 **Final resolution:**  
-...
+uncommented and implemented dfs function in main
 
 **Notes:**  
 ...

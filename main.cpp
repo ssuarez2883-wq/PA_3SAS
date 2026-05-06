@@ -148,7 +148,7 @@ bool dfs(int r, int c, const vector<vector<int>>& maze, vector<vector<bool>>& vi
         if (nr >= 0 && nr < N && nc >= 0 && nc < M) {
             if (maze[nr][nc] == 0 && !visited[nr][nc]) {
 
-                parent_c[nr][nc] = r;
+                parent_r[nr][nc] = r;
                 parent_c[nr][nc] = c;
 
                 if (dfs(nr, nc, maze, visited, parent_r, parent_c, exit_r, exit_c)) {
@@ -157,8 +157,8 @@ bool dfs(int r, int c, const vector<vector<int>>& maze, vector<vector<bool>>& vi
             }
         }
 
-        //check valid neighbor and assign pibling, recurse
     }
+    return false;
 }
 
 
@@ -199,17 +199,17 @@ int main() {
     // STUDENT WORK:
     // Call your DFS, track visited, and fill parent_r and parent_c
     // ------------------------------------------------------
-    // bool found = dfs(ent_r, ent_c, maze, visited, parent_r, parent_c, exit_r, exit_c);
+    bool found = dfs(ent_r, ent_c, maze, visited, parent_r, parent_c, exit_r, exit_c);
 
     // ------------------------------------------------------
     // STUDENT WORK:
     // If found, print the path
     // ------------------------------------------------------
-    // if (found) {
-    //     printPath(exitcell, parent_r, parent_c, ent_r, ent_c);
-    // } else {
-    //     cout << "\nNo path exists.\n";
-    // }
+    if (found) {
+         printPath(exitcell, parent_r, parent_c, ent_r, ent_c);
+     } else {
+         cout << "\nNo path exists.\n";
+     }
 
     return 0;
 }
